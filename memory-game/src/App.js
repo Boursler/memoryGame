@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
-
+import { Row, Container } from "./components/Grid";
 import images from "./images.json";
 import Geometric from './components/Geometric';
 
@@ -16,6 +16,7 @@ class App extends Component {
 
   render() {
     return (
+      <Container fluid>
       <div className="App">
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
@@ -24,7 +25,7 @@ class App extends Component {
         <p className="App-intro">
           Click on images to increase your score -- but watch out! If you click the same image twice, you will get NO POINTS for that click. The stakes are quite high. 
         </p>
-        
+        <Row>
           
            {this.state.images.map(pic => (
             <Geometric
@@ -37,9 +38,10 @@ class App extends Component {
              
                />
            ))}
-        
+           
+        </Row>
       </div>
-    
+   </Container> 
     );
   }
 }
