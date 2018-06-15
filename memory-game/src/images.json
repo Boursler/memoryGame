@@ -2,82 +2,82 @@
 	{
 	  "id": 1,
 	  "name": "blocks",
-	  "image": "./blocks.jpg",
+	  "image": "images/blocks.jpg",
 	  "alt": "grey blocks"
 	},
 	{
 	  "id": 2,
 	  "name": "bluedots",
-	  "image": "./bluedots.jpg",
+	  "image": "images/bluedots.jpg",
 	  "alt": "cool blue dots"
 	},
 	{
 	  "id": 3,
 	  "name": "bluefabric",
-	  "image": "./bluefabric.jpg",
+	  "image": "images/bluefabric.jpg",
 	  "alt": "blue fabric pieces"
 	 
 	},
 	{
 	  "id": 4,
 	  "name": "bluetexture",
-	  "image": "./bluetexture.jpg",
+	  "image": "images/bluetexture.jpg",
 	  "alt": "textured blue image"
 	 
 	},
 	{
 	  "id": 5,
 	  "name": "darkgreen",
-	  "image": "./darkgreen.png",
+	  "image": "images/darkgreen.png",
 	  "alt": "dark green image"
 	  
 	},
 	{
 	  "id": 6,
 	  "name": "kaleidoscope",
-	  "image": "./kaleidoscope.jpg",
+	  "image": "images/kaleidoscope.jpg",
 	  "alt": "kaleidoscopic image"
 	  
 	},
 	{
 	  "id": 7,
 	  "name": "motion",
-	  "image": "./motion.jpg",
+	  "image": "images/motion.jpg",
 	  "alt": "light colors that seem to be in motion"
 	 
 	},
 	{
 	  "id": 8,
 	  "name": "pink",
-	  "image": "./pink.jpg",
+	  "image": "images/pink.jpg",
 	  "alt": "pink stars"
 	 
 	},
 	{
 	  "id": 9,
 	  "name": "pink triangle",
-	  "image": "/pinktriangle.png",
+	  "image": "images/pinktriangle.png",
 	  "alt": "textured pink image"
 	  
 	},
 	{
 	  "id": 10,
 	  "name": "red and green",
-	  "image": "./redandgreen.png",
+	  "image": "images/redandgreen.png",
 	  "alt": "red and green texture"
 	  
 	},
 	{
 	  "id": 11,
 	  "name": "red triangle",
-	  "image": "./redtriangle.png",
+	  "image": "images/redtriangle.png",
 	  "alt": "reddish triangles"
 	  
 	},
 	{
 	  "id": 12,
 	  "name": "texture.jpg",
-	  "image": "./texture.jpg",
+	  "image": "images/texture.jpg",
 	  "alt": "sandlike texture"
 	 
 	}
