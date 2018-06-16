@@ -29,8 +29,6 @@ class App extends Component {
  
   
   play = event => {
-    
-    console.log(event.target);
     if(event.target.getAttribute('data-clicked') === 'false'){
       event.target.setAttribute('data-clicked', "true");
       if(this.state.pts <= 11){
@@ -42,14 +40,10 @@ class App extends Component {
         console.log("you win");
     }
     else if (event.target.getAttribute('data-clicked') === 'true'){
-      this.rearrange(this.state.images);
+      this.setState( ( ) => {
+        return {images: this.rearrange(this.state.images)};
+      } );
     }
-
-    
-    // const { name, value } = event.target;
-    // this.setState({
-    //   [name]: value
-    // });
   };
 
   render() {
