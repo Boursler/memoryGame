@@ -4,12 +4,12 @@ const Geometric = props => (
 	<Col size="md-3">
 	<div className="card">
 	  <div className="img-container">
-		<img alt={props.alt} src={props.image} />
+		<img alt={props.alt} src={props.image} onClick={props.play} data-clicked="false" />
 	  </div>
 	  
-	  <span onClick={() => props.removeFriend(props.id)} className="remove">
+	  {/* <span onClick={() => props.removeFriend(props.id)} className="remove"> */}
 		𝘅
-	  </span>
+	  {/* </span> */}
 	</div>
 	</Col>
   );
