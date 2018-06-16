@@ -26,9 +26,18 @@ class App extends Component {
     return arr;
   }
 
- 
+ restart = () => {
+   this.setState(() => {return {pts: 0, images}});
+   const imgs = document.getElementsByTagName("img");
+   for (let i = 0; i < imgs.length; i++){
+     imgs[i].setAttribute('data-clicked', 'false');
+   }
+ }
   
   play = event => {
+    this.setState( ( ) => {
+      return {images: this.rearrange(this.state.images)};
+    } );
     if(event.target.getAttribute('data-clicked') === 'false'){
       event.target.setAttribute('data-clicked', "true");
       if(this.state.pts <= 11){
@@ -40,9 +49,7 @@ class App extends Component {
         console.log("you win");
     }
     else if (event.target.getAttribute('data-clicked') === 'true'){
-      this.setState( ( ) => {
-        return {images: this.rearrange(this.state.images)};
-      } );
+      this.restart();
     }
   };
 
