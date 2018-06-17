@@ -6,14 +6,14 @@ import images from "./images.json";
 import Geometric from './components/Geometric';
 
 class App extends Component {
-  // Setting this.state.friends to the friends json array
+ 
   state = {
     images,
-    
+    win: "",
     pts: 0
   };
   rearrange = (arr) => {
-   
+   //Fisher-Yates Swap
       var i = arr.length;
       if ( i === 0 ) return false;
       while ( --i ) {
@@ -27,7 +27,7 @@ class App extends Component {
   }
 
  restart = () => {
-   this.setState(() => {return {pts: 0, images}});
+   this.setState(() => {return {pts: 0, images, win: ""}});
    const imgs = document.getElementsByTagName("img");
    for (let i = 0; i < imgs.length; i++){
      imgs[i].setAttribute('data-clicked', 'false');
@@ -40,16 +40,16 @@ class App extends Component {
     } );
     if(event.target.getAttribute('data-clicked') === 'false'){
       event.target.setAttribute('data-clicked', "true");
-      if(this.state.pts <= 11){
+      if(this.state.pts < 11){
         this.setState((prevState)=> {
           return { pts: prevState.pts + 1 }; })
       }
         
       else
-        console.log("you win");
+        this.setState(() => {return {pts: 12, win: "You won!"}; })
     }
     else if (event.target.getAttribute('data-clicked') === 'true'){
-      this.restart();
+        this.restart();
     }
   };
 
@@ -60,7 +60,7 @@ class App extends Component {
         <header className="App-header">
           
           <h1 className="App-title">Pattern Memory Game</h1>
-          <h3>Points: {this.state.pts}</h3>
+          <h3>Points: {this.state.pts} State: {this.state.win}</h3>
         </header>
         <p className="App-intro">
           Click on images to increase your score -- but watch out! If you click the same image twice, you will get NO POINTS for that click. The stakes are quite high. 

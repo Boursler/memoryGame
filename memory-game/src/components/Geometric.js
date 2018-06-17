@@ -6,10 +6,7 @@ const Geometric = props => (
 	  <div className="img-container">
 		<img alt={props.alt} src={props.image} onClick={props.play} data-clicked="false" />
 	  </div>
-	  
-	  {/* <span onClick={() => props.removeFriend(props.id)} className="remove"> */}
-		𝘅
-	  {/* </span> */}
+	 	 
 	</div>
 	</Col>
   );
